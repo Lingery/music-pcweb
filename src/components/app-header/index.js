@@ -31,7 +31,7 @@ export default memo(function TQAppHeader() {
         <HeaderWrapper>
             <div className="content wrap-v1">
                 <HeaderLeft>
-                    <a href="#/" className="logo sprite_01" exact></a>
+                    <a href="#/" className="logo sprite_01" exact> </a>
                     <div className="select-list">
                         {
                             headerLinks.map((item, index) => {

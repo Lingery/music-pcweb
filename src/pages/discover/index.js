@@ -1,9 +1,34 @@
-import React, { memo } from 'react'
+import React, { memo } from 'react';
+import { renderRoutes } from 'react-router-config';
 
-export default memo(function TQDiscover() {
+import { discoverMenu } from "@/common/local-data";
+
+import { NavLink } from 'react-router-dom';
+import { 
+    DiscoverWrapper,
+    TopMenu
+} from "./style";
+
+export default memo(function TQDiscover(props) {
+    const { route } = props;
+
+    
     return (
-        <div>
-            <h2>Discover</h2>
-        </div>
+        <DiscoverWrapper>
+            <div className="top">
+                <TopMenu className="wrap-v1">
+                    {
+                        discoverMenu.map((item) => {
+                            return (
+                                <div className="item" key={item.title}>
+                                    <NavLink to={item.link}>{item.title}</NavLink>
+                                </div>
+                            )
+                        })
+                    }
+                </TopMenu>
+            </div>
+            {renderRoutes(route.routes)}
+        </DiscoverWrapper>
     )
 })

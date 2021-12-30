@@ -46,8 +46,7 @@ export const HeaderLeft = styled.div`
           height: 19px;
           /* background-image: url(../../../assets/img/sprite_01.png); */
           /* file-loader版本过高引发的兼容问题，esModule选项已在4.3.0版本的文件加载器中引入，而在5.0.0版本中，默认情况下已将其设置为true */
-          background-image: url(${require("@/assets/img/sprite_01.png")
-            .default});
+          background-image: url(${require("@/assets/img/sprite_01.png").default});
           background-position: -190px 0;
           top: 20px;
           right: -15px;
